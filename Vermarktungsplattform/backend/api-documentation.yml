@@ -1,0 +1,143 @@
+openapi: 3.0.0
+info:
+  title: Freiburg Marketing API
+  description: API for the Freiburg city property marketing platform
+  version: "1.0"
+servers:
+  - url: localhost:5000
+paths:
+  /application:
+    get:
+      tags: [Applications]
+      summary: Get paginated list of all applications
+      responses:
+        "200":
+          description: get all applications response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/application"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      tags: [Applications]
+      summary: Create new application
+      requestBody:
+        description: Request body for creating new application
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/new_application"
+      responses:
+        "200":
+          description: new application response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/application"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /application/{application_id}:
+    get:
+      tags: [Applications]
+      summary: Get property application by ID
+      parameters:
+        - name: application_id
+          in: path
+          description: application_id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: get application response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/application"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    building:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        gml_id:
+          type: string
+        storeys_above_ground:
+          type: integer
+          format: int64
+    application:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        award_status:
+          type: string
+        application_deadline:
+          type: string
+          format: datetime
+        submission_date:
+          type: string
+          format: datetime
+        award_outcome:
+          type: string
+        additional_text:
+          type: string
+        plot_anchor:
+          type: boolean
+        building_id:
+          type: integer
+          format: int64
+        user_id:
+          type: integer
+          format: int64
+    new_application:
+      type: object
+      properties:
+        additional_text:
+          type: string
+        plot_anchor:
+          type: boolean
+        building_id:
+          type: integer
+          format: int64
+        user_id:
+          type: integer
+          format: int64
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+security:
+  - BasicAuth: []

@@ -1,0 +1,11 @@
+pandas
+numpy
+requests
+datetime
+tqdm >=4.50.0
+ipywidgets
+osmnx
+geopandas
+pygeos
+fiona
+shapely

@@ -1,0 +1,230 @@
+{
+    "asset": {
+        "generator": "COLLADA2GLTF",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "children": [
+                1
+            ],
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "name": "Z_UP"
+        },
+        {
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0,
+                    "extensions": {
+                        "KHR_draco_mesh_compression": {
+                            "bufferView": 0,
+                            "attributes": {
+                                "POSITION": 1,
+                                "NORMAL": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "attributes": {
+                        "NORMAL": 4,
+                        "POSITION": 5
+                    },
+                    "indices": 3,
+                    "mode": 4,
+                    "material": 1,
+                    "extensions": {
+                        "KHR_draco_mesh_compression": {
+                            "bufferView": 1,
+                            "attributes": {
+                                "POSITION": 1,
+                                "NORMAL": 0
+                            }
+                        }
+                    }
+                }
+            ],
+            "name": "geometry0"
+        }
+    ],
+    "accessors": [
+        {
+            "componentType": 5123,
+            "count": 66,
+            "max": [
+                39
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "componentType": 5126,
+            "count": 40,
+            "max": [
+                0.9098865389823914,
+                0.9099779725074768,
+                0.0
+            ],
+            "min": [
+                -0.9098235368728638,
+                -0.9099547863006592,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "componentType": 5126,
+            "count": 40,
+            "max": [
+                14.318000793457032,
+                5.39300012588501,
+                13.0
+            ],
+            "min": [
+                0.0,
+                -5.459000110626221,
+                0.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "componentType": 5123,
+            "count": 18,
+            "max": [
+                7
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "componentType": 5126,
+            "count": 8,
+            "max": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "componentType": 5126,
+            "count": 8,
+            "max": [
+                14.318000793457032,
+                5.39300012588501,
+                13.0
+            ],
+            "min": [
+                0.0,
+                -5.459000110626221,
+                13.0
+            ],
+            "type": "VEC3"
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "default_ai_0.2_sh_0.2_tr_0.0_dc_r_0.8_g_0.8_b_0.8_sc_r_1.0_g_1.0_b_1.0_ec_r_0.0_g_0.0_b_0_eff"
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    1.0,
+                    0.20000000298023225,
+                    0.20000000298023225,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "default_ai_0.2_sh_0.2_tr_0.0_dc_r_1.0_g_0.2_b_0.2_sc_r_1.0_g_1.0_b_1.0_ec_r_0.0_g_0.0_b_0_eff"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 317
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 317,
+            "byteLength": 158
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 475,
+            "uri": "data:application/octet-stream;base64,RFJBQ08CAgEBAAAAKBYBFgAACd/3vW33fd/3Af8CmUD/At1AAgAAAP8AAAEBCQMAAAMBAAkDAAECAAMBAAsDaTYbmQEBCAZo7zD8joRfAwCA+jUA8BWAAMD/r4DXoAAAAF+DCgD/AwAA/wEAAAoBAQEADwMBECuZEWkeCmaOZpHIHmzaN4dCFgAkryCLGVZehKxlGAAAoRmWAgBBMO0oLyGodgAAVFFFCQA4wx9LeaFhkAUAgCKw78rLKpooAQBEkO0AgBIhfQcA0vDHAgD+RQ0OAKj7Px4AACBrGU5e3P3VTnlp91k7AAA/FjMMALT7rJ3y4u6vdgAAhKwaGAAggmxHeQ3BtQMAADTssZTXGe5YAADtPmsHAABZy7Dy8mMxwwAAAAAAAAD/PwAAAAAAACGwrsAAAAAAiBZlQQ5EUkFDTwICAQEAAAAIBgEGAAADb9sB/wER/wJVQAIAAAD/AAABAQkDAAADAQAJAwABAgADAQAKAwE4GwEIAwCOhAD+AwD/AwAA/wEAAAoBAQEADwMBCCsBEAEoBAAKG4HsvqIEAKSiiRIAIATVDgBIdVlLAKAMdywAMGiCpQCAmlTKAwAAAAAAAP8/AAAAAAAAIbCuwAAAUEGIFmVBDg=="
+        }
+    ],
+    "extensionsRequired": [
+        "KHR_draco_mesh_compression"
+    ],
+    "extensionsUsed": [
+        "KHR_draco_mesh_compression"
+    ]
+}

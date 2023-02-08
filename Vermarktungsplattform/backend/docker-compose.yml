@@ -1,0 +1,20 @@
+version: "3.1"
+
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: freiburg
+    volumes:
+      - db:/var/lib/postgresql/data
+      - ./database/migrations/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      - ./database/seeds/init_data.sql:/docker-entrypoint-initdb.d/init_data.sql
+
+volumes:
+  db:
+    driver: local

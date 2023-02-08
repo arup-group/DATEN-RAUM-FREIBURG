@@ -1,0 +1,72 @@
+
+MAP
+    NAME "WFS_server"
+    STATUS ON
+    SIZE 400 300
+    SYMBOLSET "./etc/symbols.txt"
+    EXTENT 7.633814 47.932456 7.946511 48.108207
+    UNITS DD
+    SHAPEPATH "../data"
+    IMAGECOLOR 255 255 255
+    FONTSET "./etc/fonts.txt"
+  
+  
+    #
+    # Start of web interface definition
+    #
+    WEB
+      IMAGEPATH "/ms4w/tmp/ms_tmp/"
+      IMAGEURL "/ms_tmp/"
+      METADATA
+        "wfs_title"          "WFS Demo Server for MapServer" ## REQUIRED
+        "wfs_onlineresource" "localhost/cgi-bin/mapserv.exe?map=foo/bar/wfs_json.map&" ## SET THIS TO THE CONFIGURATION OF YOUR SYSTEM
+        "wfs_srs"            "EPSG:4326 EPSG:4269 EPSG:3978 EPSG:3857" ## Recommended
+        "wfs_abstract"       "This text describes my WFS service." ## Recommended
+        "wfs_enable_request" "*"  # necessary
+        "wfs_getfeature_formatlist" "geojson"
+      END
+    END
+    OUTPUTFORMAT
+        NAME "geojson"
+        DRIVER "OGR/GEOJSON"
+        MIMETYPE "application/json; subtype=geojson"
+        FORMATOPTION "STORAGE=stream"
+        FORMATOPTION "FORM=SIMPLE"
+    END
+  
+    PROJECTION
+      "init=epsg:4326"
+    END
+
+
+  
+    LAYER
+        TYPE LINE
+        NAME "traffic"
+        METADATA
+            "wfs_title"         "Traffic" ##REQUIRED
+            "wfs_srs"           "EPSG:4326" ## REQUIRED
+            "gml_include_items" "all" ## Optional (serves all attributes for layer)
+            "wfs_featureid"     "testID8171626" ## REQUIRED
+            "gml_types"         "auto" ## Optional (automatically populate the type for the attributes)
+            "wfs_enable_request" "*"
+            "wfs_use_default_extent_for_getfeature" "false" ## Optional (improves performance of OGR layers)
+        END
+        CONNECTIONTYPE OGR
+        CONNECTION "../output/traffic_results.json"
+        data "traffic_results"
+        STATUS default
+        CLASS
+              NAME "Traffic"
+              STYLE
+                COLOR 200 255 0
+                OUTLINECOLOR 120 120 120
+                WIDTH 0.8
+              END # Style
+        END # Class
+        PROJECTION
+          "init=epsg:4326"
+        END
+    END #layer
+  
+  END #mapfile

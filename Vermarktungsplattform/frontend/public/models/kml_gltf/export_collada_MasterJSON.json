@@ -1,0 +1,16 @@
+{
+	"version": "1.0.0",
+	"layername": "export",
+	"fileextension": ".kml",
+	"displayform": "collada",
+	"minLodPixels": 0,
+	"maxLodPixels": -1,
+	"colnum": 1,
+	"rownum": 1,
+	"bbox":{ 
+		"xmin": 7.78148997294175,
+		"xmax": 7.799908402102815,
+		"ymin": 48.00235902115833,
+		"ymax": 48.01476409635322
+	}
+}

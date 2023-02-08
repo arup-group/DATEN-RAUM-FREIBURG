@@ -1,0 +1,546 @@
+{
+	"info": {
+		"_postman_id": "87c443e7-d338-4cf6-8c85-7b00f0566060",
+		"name": "Frieburg",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11778438"
+	},
+	"item": [
+		{
+			"name": "Application",
+			"item": [
+				{
+					"name": "getApplication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/application/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"application",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateApplication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"award_status\" : \"pendding1211113\",\r\n        \"application_deadline\" : \"2020-01-01 00:00:00-01\",\r\n        \"award_outcome\" : \"Update thimmmms is just adata application\",\r\n        \"additional_text\" : \"Update Some Random Attional Text\",\r\n        \"block_anchor\" : true,\r\n        \"grund_id\" : 23,\r\n        \"open_to_other_plots\": false \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/application/34",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"application",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteApplication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/application/34",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"application",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submitApplication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"award_status\" : \"pendding\",\r\n        \"application_deadline\" : \"2019-01-01 00:00:00-01\",\r\n        \"award_outcome\" : \"thimmmms is just adata application\",\r\n        \"additional_text\" : \"Some Random Attional Text\",\r\n        \"block_anchor\" : false,\r\n        \"grund_id\" : 50,\r\n        \"open_to_other_plots\": true \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/application/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"application",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllApplication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/application",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"application"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getApplicationByGrund",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/application/grund/50",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"application",
+								"grund",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadApplicationFile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/Matt.Slevin/Pictures/3B7D8922-736E-422F-AA0A-64E83C258D9C.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/application/attachment/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"application",
+								"attachment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "downloadApplicationFile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/application/attachment/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"application",
+								"attachment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteApplicationFile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/application/attachment/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"application",
+								"attachment",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getApplicationFiles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/application/attachment/all/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"application",
+								"attachment",
+								"all",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Applicant",
+			"item": [
+				{
+					"name": "getAllApplicants",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/applicant/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"applicant",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getApplicant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/applicant/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"applicant",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getMe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/me",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authorise",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"\r",
+							"    var jsonData = pm.response.json()\r",
+							"\r",
+							"    pm.collectionVariables.set(\"bearer_token\", jsonData.token);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin.account@test.com\" ,\r\n    \"password\" : \"Password_123!!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/users/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		},
+		{
+			"key": "bearer_token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIiLCJpYXQiOjE2NjIxMTAxMzIsImV4cCI6MTY2NDcwMjEzMn0.XpQBFFIAvI1vS1VRMOF01Y1MW2DouVBOwpagSGcetaA",
+			"type": "string"
+		}
+	]
+}
